@@ -17,10 +17,3 @@ for item in soup.select('table > tbody > .list'):
     artist = item.select_one('.info > .artist.ellipsis').text
     if rank:
         print(rank_only, title.strip(), artist)
-        #print(rank.strip(), title.strip(), artist)
-        #print(title.strip(), artist)
-        #print(artist)
-
-
-
-
