@@ -9,7 +9,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 for item in soup.select('table > tbody > .list'):
     rank = item.select_one('.number').text   
     rank_only = rank.split("\n")[0]
-    title = item.select_one('.info > .title.ellipsis').text
+    title = item.select_one('.info > .title.ellipsis').text.strip()
     artist = item.select_one('.info > .artist.ellipsis').text
     if rank:
-        print(rank_only, title.strip(), artist)
+        print(rank_only, title, artist)
